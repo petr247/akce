@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minute Screen: co se děje okolo</title>
+<meta name="description" content="Místní akce v okolí podle času a dostupnosti. Pilot pro Rataje nad Sázavou a okolí.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<style>
+/* Layout idea: obecní vývěska v kapse. Nejdřív kdy, potom jak daleko (tady, blízko, dál), typ akce nese barva. */
+:root{
+  --paper:#f3f5f1; --card:#ffffff; --ink:#16241d; --muted:#5b6b62; --line:#d9dfd8;
+  --spruce:#1f4a38; --spruce-soft:#e2ece6; --on-spruce:#ffffff;
+  --m-red:#c8322b; --m-blue:#2463b0; --m-green:#2e8b4f; --m-yellow:#e0a800; --m-violet:#7a4bb5; --m-teal:#0e8f93;
+  --live:#c8322b; --water:#a9c7dc; --mapbg:#e7ece4;
+  --display:"Bricolage Grotesque","Figtree",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#111814; --card:#1a231e; --ink:#e9efe9; --muted:#9aa9a0; --line:#2c3831;
+    --spruce:#7fc7a3; --spruce-soft:#22302a; --on-spruce:#0f1713;
+    --m-red:#ef6a61; --m-blue:#6ea6ea; --m-green:#5cc083; --m-yellow:#f0c33c; --m-violet:#b594e6; --m-teal:#4cc5c8;
+    --live:#ef6a61; --water:#35556b; --mapbg:#18211c;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#111814; --card:#1a231e; --ink:#e9efe9; --muted:#9aa9a0; --line:#2c3831;
+  --spruce:#7fc7a3; --spruce-soft:#22302a; --on-spruce:#0f1713;
+  --m-red:#ef6a61; --m-blue:#6ea6ea; --m-green:#5cc083; --m-yellow:#f0c33c; --m-violet:#b594e6; --m-teal:#4cc5c8;
+  --live:#ef6a61; --water:#35556b; --mapbg:#18211c;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.45;-webkit-text-size-adjust:100%}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:var(--spruce)}
+:focus-visible{outline:3px solid var(--m-blue);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px 48px}
+
+header{display:flex;align-items:center;gap:12px;padding:16px 0 12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto}
+.mark{width:26px;height:26px;border-radius:3px;background:linear-gradient(#fff 0 33%,var(--m-red) 33% 67%,#fff 67%);border:1px solid var(--line);flex:none}
+.brand b{font-family:var(--display);font-size:20px;letter-spacing:-.01em}
+.brand span{display:block;font-size:12px;color:var(--muted);line-height:1.2}
+.where{display:flex;align-items:center;gap:8px;font-size:14px}
+.where label{color:var(--muted)}
+select{font:inherit;font-weight:600;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;min-height:40px}
+
+.controls{display:flex;flex-direction:column;gap:10px;padding-bottom:12px}
+.row{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0;margin:0 -16px;padding-inline:16px}
+.row::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 14px;min-height:40px;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.chip small{font-weight:500;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip[aria-pressed="true"]{background:var(--spruce);border-color:var(--spruce);color:var(--on-spruce)}
+.chip[aria-pressed="true"] small{color:inherit;opacity:.8}
+.chip.time{font-family:var(--display);font-size:15px}
+.dot{width:10px;height:10px;border-radius:2px;flex:none}
+.reach{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:12px;background:var(--card);padding:3px;gap:2px}
+.seg button{border:0;background:none;border-radius:9px;padding:7px 12px;min-height:36px;font-weight:600;font-size:14px}
+.seg button[aria-pressed="true"]{background:var(--spruce-soft);color:var(--spruce)}
+
+.main{display:grid;gap:16px}
+.mapbox{background:var(--mapbg);border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative}
+.mapbox{height:300px}
+#map{position:absolute;inset:0;background:var(--mapbg);z-index:0}
+.mapnote{z-index:500;pointer-events:none}
+.pin{background:var(--spruce);color:var(--on-spruce);border:2px solid var(--card);border-radius:50%;font:700 12px var(--body);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+.pin.off{background:var(--muted);opacity:.6}
+.pin.sel{background:var(--m-red);color:#fff}
+.me{background:var(--m-blue);border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 2px var(--m-blue)}
+.mlogo{display:block;line-height:0}
+.where{flex:1 1 260px;justify-content:flex-end}
+.where input{font:inherit;font-weight:600;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;min-height:40px;min-width:0;flex:1 1 150px;max-width:260px}
+.where button{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:8px 12px;min-height:40px;font-weight:600;font-size:14px;white-space:nowrap}
+.msg{font-size:13px;color:var(--muted);margin:0 0 8px;min-height:1em}
+@media (min-width:860px){.mapbox{height:440px}}
+.summary{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:4px 0 2px}
+.summary p{margin:0;font-size:14px;color:var(--muted)}
+.summary p b{color:var(--ink)}
+.day{font-family:var(--display);font-size:18px;margin:18px 0 8px;display:flex;align-items:baseline;gap:8px}
+.day small{font-family:var(--body);font-size:13px;color:var(--muted);font-weight:500}
+.list{display:flex;flex-direction:column;gap:8px}
+.ev{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.ev summary{display:grid;grid-template-columns:5px 76px 1fr;gap:0 12px;padding-right:14px;cursor:pointer;list-style:none}
+.ev summary::-webkit-details-marker{display:none}
+.ev .when span{display:block}
+.ty{font-size:12px;font-weight:700;display:inline-flex;gap:6px;align-items:center;color:var(--muted);margin-bottom:2px}
+.bar{height:6px;border-radius:3px;margin-top:9px;position:relative;background:linear-gradient(90deg,transparent calc(28.57% - 1px),var(--line) 0,var(--line) 28.57%,transparent 0,transparent calc(57.14% - 1px),var(--line) 0,var(--line) 57.14%,transparent 0,transparent calc(85.71% - 1px),var(--line) 0,var(--line) 85.71%,transparent 0),var(--spruce-soft)}
+.bar i{position:absolute;top:0;bottom:0;border-radius:3px}
+.more{margin-left:auto;font-size:12px;color:var(--spruce);font-weight:600}
+.ev[open] .more{visibility:hidden}
+.detail{border-top:1px solid var(--line);margin-left:5px;padding:12px 14px 14px;display:flex;gap:14px;flex-wrap:wrap;font-size:14px}
+.detail p{margin:0 0 6px;max-width:60ch}
+.poster{width:150px;height:auto;border-radius:8px;border:1px solid var(--line);align-self:flex-start}
+.zone{font-family:var(--display);font-size:20px;margin:22px 0 8px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.zone small{font-family:var(--body);font-size:13px;color:var(--muted);font-weight:500}
+.ev .stripe{align-self:stretch}
+.ev .when{padding:12px 0;font-variant-numeric:tabular-nums}
+.ev .when b{font-family:var(--display);font-size:18px;display:block;line-height:1.1;white-space:nowrap}
+.ev .when span{font-size:12px;color:var(--muted)}
+.ev .body{padding:12px 0;min-width:0}
+.ev h3{margin:0 0 2px;font-size:16px;line-height:1.25;text-wrap:balance}
+.ev .place{font-size:14px;color:var(--muted);margin:0}
+.ev .place b{color:var(--ink);font-weight:600}
+.ev .desc{font-size:14px;margin:6px 0 0}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;align-items:center}
+.tag{font-size:12px;font-weight:600;border-radius:6px;padding:2px 7px;background:var(--spruce-soft);color:var(--spruce)}
+.tag.price{background:none;border:1px solid var(--line);color:var(--ink)}
+.tag.live{background:var(--live);color:#fff}
+.tag.far{background:none;border:1px dashed var(--line);color:var(--muted)}
+.src{font-size:12px;margin-left:auto}
+.empty{background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:20px;color:var(--muted);font-size:15px}
+.empty b{color:var(--ink)}
+footer{margin-top:32px;border-top:1px solid var(--line);padding-top:16px;font-size:13px;color:var(--muted);max-width:68ch}
+footer h2{font-family:var(--display);font-size:15px;color:var(--ink);margin:0 0 6px}
+footer ul{margin:0;padding-left:18px}
+footer li{margin-bottom:4px}
+
+@media (min-width:860px){
+  .main{grid-template-columns:minmax(0,1fr) 400px;align-items:start}
+  .side{position:sticky;top:12px;order:2}
+  .row{flex-wrap:wrap;overflow:visible;margin:0;padding-inline:0}
+}
+@media (prefers-reduced-motion:no-preference){ .chip,.seg button{transition:background .15s,color .15s} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="mark" aria-hidden="true"></div>
+      <div><b>Minute Screen</b><span>Co se děje okolo. Pilot pro Ratajsko.</span></div>
+    </div>
+    <form class="where" id="whereForm">
+      <label for="origin">Jsem v</label>
+      <input id="origin" list="originList" autocomplete="off" placeholder="obec nebo adresa">
+      <datalist id="originList"></datalist>
+      <button type="button" id="gps">Moje poloha</button>
+    </form>
+  </header>
+  <p class="msg" id="msg" role="status"></p>
+
+  <section class="controls" aria-label="Filtry">
+    <div class="row" id="timeRow" role="group" aria-label="Kdy"></div>
+    <div class="reach">
+      <div class="seg" id="modeSeg" role="group" aria-label="Jak se dopravím"></div>
+      <div class="seg" id="reachSeg" role="group" aria-label="Jak daleko"></div>
+    </div>
+    <div class="row" id="typeRow" role="group" aria-label="Typ akce"></div>
+  </section>
+
+  <div class="main">
+    <aside class="side">
+      <div class="mapbox"><div id="map" aria-label="Mapa akcí v okolí"></div></div>
+    </aside>
+    <section>
+      <div class="summary"><p id="count"></p></div>
+      <div id="list"></div>
+    </section>
+  </div>
+
+  <footer>
+    <h2>O pilotu</h2>
+    <ul>
+      <li>Akce pocházejí z webů obcí, památek a z Kudy z nudy. Každá karta odkazuje na zdroj, kde si údaje ověříš. Data aktualizována <span id="upd"></span>.</li>
+      <li>Vzdálenosti a časy cesty počítá plánovač Mapy.com. Hodnoty označené ≈ jsou jen odhad ze vzdušné čáry.</li>
+      <li>Proužek na kartě ukazuje, kdy akce během dne běží (8 až 22 h, rysky ve 12, 16 a 20 h).</li>
+    </ul>
+  </footer>
+</div>
+<script src="vendor/leaflet.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

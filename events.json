@@ -1,0 +1,522 @@
+{
+ "updated": "2026-11-14",
+ "origins": [
+  {
+   "name": "Rataje nad Sázavou",
+   "lat": 49.8419,
+   "lon": 14.9567
+  },
+  {
+   "name": "Český Šternberk",
+   "lat": 49.8108,
+   "lon": 14.9281
+  },
+  {
+   "name": "Sázava",
+   "lat": 49.8717,
+   "lon": 14.8967
+  },
+  {
+   "name": "Uhlířské Janovice",
+   "lat": 49.8803,
+   "lon": 15.0647
+  },
+  {
+   "name": "Kácov",
+   "lat": 49.7775,
+   "lon": 15.0286
+  },
+  {
+   "name": "Kutná Hora",
+   "lat": 49.9484,
+   "lon": 15.2682
+  }
+ ],
+ "places": {
+  "r_zamek": {
+   "name": "Nádvoří zámku",
+   "town": "Rataje nad Sázavou",
+   "lat": 49.8423,
+   "lon": 14.957
+  },
+  "r_sokol": {
+   "name": "Sokolovna",
+   "town": "Rataje nad Sázavou",
+   "lat": 49.841,
+   "lon": 14.9585
+  },
+  "r_pivo": {
+   "name": "Pivovárek",
+   "town": "Rataje nad Sázavou",
+   "lat": 49.8428,
+   "lon": 14.956
+  },
+  "r_obec": {
+   "name": "Rataje nad Sázavou",
+   "town": "",
+   "lat": 49.8419,
+   "lon": 14.9567
+  },
+  "stern": {
+   "name": "Hrad Český Šternberk",
+   "town": "Český Šternberk",
+   "lat": 49.8108,
+   "lon": 14.9281
+  },
+  "blato": {
+   "name": "Bistro Maštal, Farma Bláto",
+   "town": "Uhlířské Janovice",
+   "lat": 49.856,
+   "lon": 15.042
+  },
+  "kh_vors": {
+   "name": "Klášter sv. Voršily",
+   "town": "Kutná Hora",
+   "lat": 49.9497,
+   "lon": 15.2641
+  },
+  "kh_sedl": {
+   "name": "Katedrála Nanebevzetí Panny Marie, Sedlec",
+   "town": "Kutná Hora",
+   "lat": 49.9603,
+   "lon": 15.289
+  },
+  "kh_hrad": {
+   "name": "Hrádek, České muzeum stříbra",
+   "town": "Kutná Hora",
+   "lat": 49.9466,
+   "lon": 15.2655
+  },
+  "kh_gask": {
+   "name": "GASK, Galerie Středočeského kraje",
+   "town": "Kutná Hora",
+   "lat": 49.9459,
+   "lon": 15.264
+  },
+  "kh_vlas": {
+   "name": "Nádvoří Vlašského dvora",
+   "town": "Kutná Hora",
+   "lat": 49.9483,
+   "lon": 15.2687
+  },
+  "kh_pal": {
+   "name": "Palackého náměstí",
+   "town": "Kutná Hora",
+   "lat": 49.9492,
+   "lon": 15.2678
+  }
+ },
+ "events": [
+  {
+   "title": "Svatomartinský víkend v bistru Maštal",
+   "place": "blato",
+   "type": "gastro",
+   "price": null,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Husí hody od předkrmů po dezert. Rezervace stolu doporučena. Časy zdroj neuvádí.",
+   "allDay": true,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-13T00:00",
+     "2026-11-15T23:59"
+    ]
+   ],
+   "src": "https://www.farma-blato.cz/svatomartinsky-vikend-v-bistru-mastal/",
+   "srcName": "farma-blato.cz"
+  },
+  {
+   "title": "Svatomartinské hody v Kutné Hoře",
+   "place": "kh_vors",
+   "type": "gastro",
+   "price": null,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Otevření svatomartinských vín, degustace, husí speciality, přednášky a hudba. Pro dospělé.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-14T11:00",
+     "2026-11-14T17:00"
+    ]
+   ],
+   "src": "https://www.kudyznudy.cz/akce/svatomartinske-hody-v-kutne-hore-1",
+   "srcName": "Kudy z nudy"
+  },
+  {
+   "title": "Prohlídky hradu Český Šternberk",
+   "place": "stern",
+   "type": "hrad",
+   "price": null,
+   "priceLabel": "dle ceníku hradu",
+   "tags": [
+    "rodina"
+   ],
+   "desc": "Začátky prohlídek v 11:00, 12:30 a 14:00. Vstupenky je lepší zajistit předem.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-14T11:00",
+     "2026-11-14T15:00"
+    ],
+    [
+     "2026-11-15T11:00",
+     "2026-11-15T15:00"
+    ],
+    [
+     "2026-11-16T11:00",
+     "2026-11-16T15:00"
+    ],
+    [
+     "2026-11-17T11:00",
+     "2026-11-17T15:00"
+    ],
+    [
+     "2026-11-21T11:00",
+     "2026-11-21T15:00"
+    ],
+    [
+     "2026-11-22T11:00",
+     "2026-11-22T15:00"
+    ],
+    [
+     "2026-11-28T11:00",
+     "2026-11-28T15:00"
+    ],
+    [
+     "2026-11-29T11:00",
+     "2026-11-29T15:00"
+    ]
+   ],
+   "src": "https://www.hradceskysternberk.cz/novinky.php",
+   "srcName": "hradceskysternberk.cz"
+  },
+  {
+   "title": "Výstava Protistrany (Týden svobody)",
+   "place": "kh_sedl",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Audiovizuální instalace Paměti národa o 17. listopadu 1989. Otevírací dobu zdroj neuvádí.",
+   "allDay": true,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-16T00:00",
+     "2026-11-30T23:59"
+    ]
+   ],
+   "src": "https://www.kudyznudy.cz/akce/tyden-svobody-v-katedrale-nanebevzeti-panny-marie",
+   "srcName": "Kudy z nudy"
+  },
+  {
+   "title": "Bohoslužba za svobodu",
+   "place": "kh_sedl",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Po bohoslužbě zapálení svíček a svíčkové srdce před presbytářem.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-17T17:00",
+     "2026-11-17T18:30"
+    ]
+   ],
+   "src": "https://www.kudyznudy.cz/akce/tyden-svobody-v-katedrale-nanebevzeti-panny-marie",
+   "srcName": "Kudy z nudy"
+  },
+  {
+   "title": "Pivovárek žije! Znovuotevření ratajského pivovárku",
+   "place": "r_pivo",
+   "type": "kultura",
+   "price": 0,
+   "priceLabel": "vstupné dobrovolné",
+   "tags": [],
+   "desc": "Kapela Hobluj, krátký film s hudebním doprovodem Petra Wajsara, dobré nápoje. Pořádá Spolek přátel Pivovárku.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": "posters/pivo.jpg",
+   "occ": [
+    [
+     "2026-11-17T17:00",
+     "2026-11-17T20:00"
+    ]
+   ],
+   "src": "https://www.obecrataje.cz/zivot-v-obci/kalendar-akci/pivovarek-zije-764_429cs.html",
+   "srcName": "obecrataje.cz"
+  },
+  {
+   "title": "Předvánoční jarmark a pásmo krátkých pohádek",
+   "place": "r_zamek",
+   "type": "trh",
+   "price": 0,
+   "priceLabel": "vstupné dobrovolné",
+   "tags": [
+    "rodina",
+    "děti"
+   ],
+   "desc": "Pohádky v kapli v 10:00, 11:00 a 12:00.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-21T10:00",
+     "2026-11-21T15:00"
+    ]
+   ],
+   "src": "https://www.obecrataje.cz/zivot-v-obci/kalendar-akci/predvanocni-jarmark-a-pasmo-kratkych-pohadek-759_424cs.html",
+   "srcName": "obecrataje.cz"
+  },
+  {
+   "title": "Vánoční tvoření v sokolovně",
+   "place": "r_sokol",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [
+    "rodina",
+    "děti"
+   ],
+   "desc": "Tvořivé odpoledne před adventem.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-21T13:00",
+     "2026-11-21T16:00"
+    ]
+   ],
+   "src": "https://www.obecrataje.cz/zivot-v-obci/kalendar-akci/vanocni-tvoreni-v-sokolovne-761_426cs.html",
+   "srcName": "obecrataje.cz"
+  },
+  {
+   "title": "Divadlo: komedie Plastika",
+   "place": "r_sokol",
+   "type": "kultura",
+   "price": 100,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Hraje Divadelní spolek Matouš.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": "posters/divadlo.jpg",
+   "occ": [
+    [
+     "2026-11-21T19:00",
+     "2026-11-21T22:00"
+    ]
+   ],
+   "src": "https://www.obecrataje.cz/zivot-v-obci/kalendar-akci/divadelni-predstaveni-760_425cs.html",
+   "srcName": "obecrataje.cz"
+  },
+  {
+   "title": "Vánoční výstava Od výlohy ke stromečku",
+   "place": "kh_hrad",
+   "type": "kultura",
+   "price": 40,
+   "priceLabel": "40 Kč, snížené 30 Kč",
+   "tags": [
+    "rodina"
+   ],
+   "desc": "Jak se dřív nakupovalo na Vánoce. Otevřeno úterý až neděle 9:00–17:00.",
+   "allDay": true,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-26T09:00",
+     "2027-01-10T17:00"
+    ]
+   ],
+   "src": "https://www.kudyznudy.cz/akce/vanocni-vystava-od-vylohy-ke-stromecku-na-hradku-v",
+   "srcName": "Kudy z nudy"
+  },
+  {
+   "title": "Advent – design – GASK",
+   "place": "kh_gask",
+   "type": "trh",
+   "price": 0,
+   "priceLabel": null,
+   "tags": [
+    "rodina",
+    "děti"
+   ],
+   "desc": "Design market, dílny, živá hudba. Divadlo pro děti v 11:00 a 14:00, komentované prohlídky výstav ve 14:00 a 15:00.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-28T11:00",
+     "2026-11-28T16:00"
+    ]
+   ],
+   "src": "https://www.kudyznudy.cz/akce/advent-design-gask",
+   "srcName": "Kudy z nudy"
+  },
+  {
+   "title": "Rozsvěcení vánočního stromu",
+   "place": "r_obec",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [
+    "rodina",
+    "děti"
+   ],
+   "desc": "Vystoupí děti z mateřské školy. Soutěž o nejlepší vánoční cukroví.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-28T17:00",
+     "2026-11-28T19:00"
+    ]
+   ],
+   "src": "https://www.obecrataje.cz/zivot-v-obci/kalendar-akci/rozsveceni-vanocniho-stromu-762_427cs.html",
+   "srcName": "obecrataje.cz"
+  },
+  {
+   "title": "Adventní trhy na nádvoří Vlašského dvora",
+   "place": "kh_vlas",
+   "type": "trh",
+   "price": null,
+   "priceLabel": null,
+   "tags": [
+    "rodina",
+    "děti"
+   ],
+   "desc": "Tržiště se stánky a kreativní dílničky. Každou adventní neděli.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-29T11:00",
+     "2026-11-29T18:00"
+    ],
+    [
+     "2026-12-06T11:00",
+     "2026-12-06T18:00"
+    ],
+    [
+     "2026-12-13T11:00",
+     "2026-12-13T18:00"
+    ],
+    [
+     "2026-12-20T11:00",
+     "2026-12-20T18:00"
+    ]
+   ],
+   "src": "https://www.kudyznudy.cz/akce/adventni-trhy-na-nadvori-vlasskeho-dvora",
+   "srcName": "Kudy z nudy"
+  },
+  {
+   "title": "Adventní minijarmark a dílničky pro děti",
+   "place": "stern",
+   "type": "trh",
+   "price": null,
+   "priceLabel": "dle ceníku hradu",
+   "tags": [
+    "rodina",
+    "děti"
+   ],
+   "desc": "Součást adventních a vánočních prohlídek hradu. Poslední prohlídka v 15:00.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-05T10:00",
+     "2026-12-05T16:00"
+    ],
+    [
+     "2026-12-06T10:00",
+     "2026-12-06T16:00"
+    ]
+   ],
+   "src": "https://www.hradceskysternberk.cz/novinky.php",
+   "srcName": "hradceskysternberk.cz"
+  },
+  {
+   "title": "Kutnohorský hudební advent a trhy",
+   "place": "kh_pal",
+   "type": "trh",
+   "price": 0,
+   "priceLabel": null,
+   "tags": [
+    "rodina",
+    "děti"
+   ],
+   "desc": "Řemeslné stánky, dětské dílny, historický kolotoč. Hudební program od 15:00.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-05T12:00",
+     "2026-12-05T21:00"
+    ],
+    [
+     "2026-12-12T12:00",
+     "2026-12-12T21:00"
+    ],
+    [
+     "2026-12-19T12:00",
+     "2026-12-19T21:00"
+    ]
+   ],
+   "src": "https://www.kudyznudy.cz/akce/vanocni-trhy-v-kutne-hore",
+   "srcName": "Kudy z nudy"
+  },
+  {
+   "title": "Adventní a vánoční prohlídky hradu",
+   "place": "stern",
+   "type": "hrad",
+   "price": null,
+   "priceLabel": "dle ceníku hradu",
+   "tags": [
+    "rodina"
+   ],
+   "desc": "Vánočně vyzdobený hrad. Poslední prohlídka v 15:00.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-12T10:00",
+     "2026-12-12T16:00"
+    ],
+    [
+     "2026-12-13T10:00",
+     "2026-12-13T16:00"
+    ],
+    [
+     "2026-12-19T10:00",
+     "2026-12-19T16:00"
+    ],
+    [
+     "2026-12-20T10:00",
+     "2026-12-20T16:00"
+    ]
+   ],
+   "src": "https://www.hradceskysternberk.cz/novinky.php",
+   "srcName": "hradceskysternberk.cz"
+  }
+ ]
+}
