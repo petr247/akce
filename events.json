@@ -3,107 +3,107 @@
  "origins": [
   {
    "name": "Rataje nad Sázavou",
-   "lat": 49.8419,
-   "lon": 14.9567
+   "lat": 49.84185,
+   "lon": 14.95672
   },
   {
    "name": "Český Šternberk",
-   "lat": 49.8108,
-   "lon": 14.9281
+   "lat": 49.81089,
+   "lon": 14.92815
   },
   {
    "name": "Sázava",
-   "lat": 49.8717,
-   "lon": 14.8967
+   "lat": 49.87164,
+   "lon": 14.89674
   },
   {
    "name": "Uhlířské Janovice",
-   "lat": 49.8803,
-   "lon": 15.0647
+   "lat": 49.88019,
+   "lon": 15.06481
   },
   {
    "name": "Kácov",
-   "lat": 49.7775,
-   "lon": 15.0286
+   "lat": 49.77787,
+   "lon": 15.02789
   },
   {
    "name": "Kutná Hora",
-   "lat": 49.9484,
-   "lon": 15.2682
+   "lat": 49.94839,
+   "lon": 15.26816
   }
  ],
  "places": {
   "r_zamek": {
    "name": "Nádvoří zámku",
    "town": "Rataje nad Sázavou",
-   "lat": 49.8423,
-   "lon": 14.957
+   "lat": 49.84207,
+   "lon": 14.95753
   },
   "r_sokol": {
    "name": "Sokolovna",
    "town": "Rataje nad Sázavou",
-   "lat": 49.841,
-   "lon": 14.9585
+   "lat": 49.84185,
+   "lon": 14.95672
   },
   "r_pivo": {
    "name": "Pivovárek",
    "town": "Rataje nad Sázavou",
-   "lat": 49.8428,
-   "lon": 14.956
+   "lat": 49.84215,
+   "lon": 14.95669
   },
   "r_obec": {
    "name": "Rataje nad Sázavou",
    "town": "",
-   "lat": 49.8419,
-   "lon": 14.9567
+   "lat": 49.84185,
+   "lon": 14.95672
   },
   "stern": {
    "name": "Hrad Český Šternberk",
    "town": "Český Šternberk",
-   "lat": 49.8108,
-   "lon": 14.9281
+   "lat": 49.80946,
+   "lon": 14.92643
   },
   "blato": {
    "name": "Bistro Maštal, Farma Bláto",
    "town": "Uhlířské Janovice",
-   "lat": 49.856,
-   "lon": 15.042
+   "lat": 49.89119,
+   "lon": 15.02719
   },
   "kh_vors": {
    "name": "Klášter sv. Voršily",
    "town": "Kutná Hora",
-   "lat": 49.9497,
-   "lon": 15.2641
+   "lat": 49.95178,
+   "lon": 15.2685
   },
   "kh_sedl": {
    "name": "Katedrála Nanebevzetí Panny Marie, Sedlec",
    "town": "Kutná Hora",
-   "lat": 49.9603,
-   "lon": 15.289
+   "lat": 49.95985,
+   "lon": 15.29007
   },
   "kh_hrad": {
    "name": "Hrádek, České muzeum stříbra",
    "town": "Kutná Hora",
-   "lat": 49.9466,
-   "lon": 15.2655
+   "lat": 49.94769,
+   "lon": 15.26538
   },
   "kh_gask": {
    "name": "GASK, Galerie Středočeského kraje",
    "town": "Kutná Hora",
-   "lat": 49.9459,
-   "lon": 15.264
+   "lat": 49.94627,
+   "lon": 15.26389
   },
   "kh_vlas": {
    "name": "Nádvoří Vlašského dvora",
    "town": "Kutná Hora",
-   "lat": 49.9483,
-   "lon": 15.2687
+   "lat": 49.94833,
+   "lon": 15.26855
   },
   "kh_pal": {
    "name": "Palackého náměstí",
    "town": "Kutná Hora",
-   "lat": 49.9492,
-   "lon": 15.2678
+   "lat": 49.94937,
+   "lon": 15.26822
   }
  },
  "events": [

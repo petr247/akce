@@ -191,7 +191,7 @@ function drawPins(){
     m.on('click',()=>{ if(!c.ok) return; st.place=(st.place&&st.place.join()===c.ids.join())?null:c.ids; render(); });
   }
   if(meMarker) meMarker.remove();
-  meMarker=L.marker([st.origin.lat,st.origin.lon],{icon:L.divIcon({className:'',html:'<div class="me" style="width:14px;height:14px"></div>',iconSize:[14,14]}),interactive:false,zIndexOffset:1000}).addTo(map);
+  meMarker=L.marker([st.origin.lat,st.origin.lon],{icon:L.divIcon({className:'',html:'<div class="me" style="width:44px;height:44px"></div>',iconSize:[44,44]}),interactive:false,zIndexOffset:-1000}).addTo(map);
 }
 function fitMap(){
   if(!map) return;
