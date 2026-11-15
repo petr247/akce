@@ -238,7 +238,7 @@ $('gps').onclick=()=>{
     const d=await (await fetch('events.json',{cache:'no-cache'})).json();
     ORIGINS=d.origins; P=d.places;
     EVENTS=d.events.filter(e=>P[e.place]).map((e,i)=>({...e,id:i,allDay:!!(e.allDay||e.noTime),tags:e.tags||[],o:e.occ.map(([s,x])=>({s:new Date(s),e:new Date(x)}))}));
-    if(window.SITE_NAME){ $('siteName').textContent=window.SITE_NAME; document.title=window.SITE_NAME+': co se děje okolo'; }
+    if(window.SITE_NAME){ $('siteName').textContent=window.SITE_NAME; document.title=window.SITE_NAME+': za minutu víš, co se děje v okolí'; }
     $('upd').textContent=dm(new Date(d.updated+'T12:00'))+' '+d.updated.slice(0,4);
     $('originList').innerHTML=ORIGINS.map(o=>'<option value="'+esc(o.name)+'">').join('');
     st.origin=ORIGINS[0]; $('origin').value=st.origin.name;
