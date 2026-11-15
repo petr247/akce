@@ -1,0 +1,107 @@
+{
+ "popis": "Registr zdrojů pro pilot Ratajsko. Stav k 15. 11. 2026. Robot bude tento seznam procházet denně.",
+ "vrstvy": {
+  "1_agregatory": [
+   {
+    "nazev": "Kudy z nudy, stránky obcí",
+    "url": "https://www.kudyznudy.cz/kam-pojedete/stredocesky-kraj/kutnohorsko-kolinsko/kutna-hora",
+    "stav": "čitelné",
+    "pozn": "pro každou obec v perimetru vlastní stránka; akce zadávají pořadatelé"
+   },
+   {
+    "nazev": "Posázaví, regionální kalendář",
+    "url": "https://klastersazava.posazavi.com/cz/kalendar-akci/",
+    "stav": "čitelné",
+    "pozn": "pokrývá celé Posázaví, filtr podle města a data"
+   },
+   {
+    "nazev": "GoOut",
+    "url": "https://goout.net/cs/kacov/akce/lezhygchpe/",
+    "stav": "obsah se načítá skriptem",
+    "pozn": "jen akce se vstupenkami"
+   }
+  ],
+  "2_obce": [
+   {
+    "obec": "Rataje nad Sázavou",
+    "url": "https://www.obecrataje.cz/zivot-v-obci/kalendar-akci/",
+    "stav": "čitelné",
+    "pozn": "ceny a program bývají jen na plakátu (obrázek)"
+   },
+   {
+    "obec": "Kácov",
+    "url": "https://kacov.cz/index.php?id=aktuality",
+    "stav": "čitelné",
+    "pozn": "akce jsou v aktualitách, často bez času"
+   },
+   {
+    "obec": "Sázava",
+    "url": "https://www.mestosazava.cz/",
+    "stav": "nepodařilo se načíst",
+    "pozn": "zkusit znovu; infocentrum odkazuje na Kudy z nudy"
+   },
+   {
+    "obec": "Uhlířské Janovice",
+    "url": "https://www.uhlirskejanovice.cz/ap",
+    "stav": "robots.txt zakazuje",
+    "pozn": "požádat město o souhlas"
+   },
+   {
+    "obec": "Kutná Hora",
+    "url": "https://www.kutnahora.cz/kalendar-udalosti",
+    "stav": "robots.txt zakazuje",
+    "pozn": "požádat město o souhlas; zatím přes Kudy z nudy"
+   },
+   {
+    "obec": "Zruč nad Sázavou",
+    "url": "https://www.mesto-zruc.cz/volny-cas/kultura/kulturni-akce/",
+    "stav": "neověřeno"
+   }
+  ],
+  "3_mista": [
+   {
+    "misto": "Hrad Český Šternberk",
+    "url": "https://www.hradceskysternberk.cz/novinky.php",
+    "stav": "čitelné",
+    "pozn": "volný text v novinkách"
+   },
+   {
+    "misto": "Farma Bláto",
+    "url": "https://www.farma-blato.cz/kalendar-akci/",
+    "stav": "čitelné",
+    "pozn": "data až na podstránkách"
+   },
+   {
+    "misto": "Huť František, Sázava",
+    "url": "https://hutfrantisek.cz/kalendar-akci/",
+    "stav": "čitelné",
+    "pozn": "časy a ceny na podstránkách"
+   },
+   {
+    "misto": "Klášter Sázava",
+    "url": "https://www.klaster-sazava.cz/cs/akce",
+    "stav": "výpis po měsících se nenačetl",
+    "pozn": "hlavní okruh zavřený do jara 2027"
+   },
+   {
+    "misto": "Zámek Zruč nad Sázavou",
+    "url": "https://www.zamek-zruc.cz/akce",
+    "stav": "čitelné"
+   }
+  ]
+ },
+ "k_provereni": [
+  "Ledečko",
+  "Samopše a hrad Talmberk",
+  "Stříbrná Skalice",
+  "Chocerady",
+  "Divišov",
+  "Ostředek",
+  "Soběšín",
+  "Pivovar Hubertus Kácov",
+  "Zámek Kácov",
+  "Skanzen Kouřim",
+  "Posázavský Pacifik (zvláštní jízdy vlaků)",
+  "sokolovny a SDH v obcích (často jen Facebook)"
+ ]
+}

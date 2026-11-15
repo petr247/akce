@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14",
+ "updated": "2026-11-15",
  "origins": [
   {
    "name": "Rataje nad Sázavou",
@@ -30,6 +30,11 @@
    "name": "Kutná Hora",
    "lat": 49.94839,
    "lon": 15.26816
+  },
+  {
+   "name": "Zruč nad Sázavou",
+   "lat": 49.7401,
+   "lon": 15.10606
   }
  ],
  "places": {
@@ -104,6 +109,42 @@
    "town": "Kutná Hora",
    "lat": 49.94937,
    "lon": 15.26822
+  },
+  "s_hut": {
+   "name": "Huť František",
+   "town": "Sázava",
+   "lat": 49.87844,
+   "lon": 14.91131
+  },
+  "s_kd": {
+   "name": "Kulturní dům Jiřího Voskovce",
+   "town": "Sázava",
+   "lat": 49.87517,
+   "lon": 14.90256
+  },
+  "s_nam": {
+   "name": "Náměstí Voskovce a Wericha",
+   "town": "Sázava",
+   "lat": 49.87517,
+   "lon": 14.90256
+  },
+  "kacov": {
+   "name": "Kácov",
+   "town": "",
+   "lat": 49.77787,
+   "lon": 15.02789
+  },
+  "zruc": {
+   "name": "Zámek Zruč nad Sázavou",
+   "town": "Zruč nad Sázavou",
+   "lat": 49.74426,
+   "lon": 15.10145
+  },
+  "ostredek": {
+   "name": "Obecní společenský sál",
+   "town": "Ostředek",
+   "lat": 49.83474,
+   "lon": 14.83348
   }
  },
  "events": [
@@ -517,6 +558,352 @@
    ],
    "src": "https://www.hradceskysternberk.cz/novinky.php",
    "srcName": "hradceskysternberk.cz"
+  },
+  {
+   "title": "Tomáš Hanák: Kuba – ráj na zemi?",
+   "place": "s_kd",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Cestopisná one-man-show. Vstupenky přes GoOut.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-20T19:30",
+     "2026-11-20T21:30"
+    ]
+   ],
+   "src": "https://klastersazava.posazavi.com/cz/kalendar-akci/46365-cestopisna-one-man-show-tomase-hanaka-kuba-raj-na-zemi.html",
+   "srcName": "posazavi.com"
+  },
+  {
+   "title": "Galavečer boxu",
+   "place": "s_hut",
+   "type": "sport",
+   "price": 900,
+   "priceLabel": "od 900 Kč",
+   "tags": [],
+   "desc": "Dveře se otevírají v 17:30, hlavní program začíná v 19:00.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-21T17:30",
+     "2026-11-21T22:00"
+    ]
+   ],
+   "src": "https://hutfrantisek.cz/udalost/galavecer-boxu/",
+   "srcName": "hutfrantisek.cz"
+  },
+  {
+   "title": "Poslední snídaně U Lípy",
+   "place": "ostredek",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Obecní společenský sál, Ostředek 60.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-21T19:00",
+     "2026-11-21T21:00"
+    ]
+   ],
+   "src": "https://klastersazava.posazavi.com/cz/kalendar-akci/46870-posledni-snidane-u-lipy.html",
+   "srcName": "posazavi.com"
+  },
+  {
+   "title": "Rozsvícení Františka",
+   "place": "s_hut",
+   "type": "kultura",
+   "price": 0,
+   "priceLabel": null,
+   "tags": [
+    "rodina"
+   ],
+   "desc": "Adventní rozsvícení areálu sklářské huti s doprovodným programem. Konec zdroj neuvádí.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-28T12:00",
+     "2026-11-28T18:00"
+    ]
+   ],
+   "src": "https://hutfrantisek.cz/udalost/rozsviceni-frantiska/",
+   "srcName": "hutfrantisek.cz"
+  },
+  {
+   "title": "Malý princ (Divadlo Kampa)",
+   "place": "s_hut",
+   "type": "kultura",
+   "price": 199,
+   "priceLabel": null,
+   "tags": [
+    "rodina"
+   ],
+   "desc": "Divadelní zpracování s živou hudbou a loutkou. Délka 60 minut.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-28T15:00",
+     "2026-11-28T16:00"
+    ]
+   ],
+   "src": "https://hutfrantisek.cz/udalost/maly-princ/",
+   "srcName": "hutfrantisek.cz"
+  },
+  {
+   "title": "Rozsvícení vánočního stromku v Kácově",
+   "place": "kacov",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [
+    "rodina"
+   ],
+   "desc": "Čas, místo ani program web městyse zatím neuvádí.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-28T00:00",
+     "2026-11-28T23:59"
+    ]
+   ],
+   "src": "https://kacov.cz/index.php?aktualita=rozsviceni-vanocniho-2701&id=aktuality",
+   "srcName": "kacov.cz",
+   "noTime": true
+  },
+  {
+   "title": "Sázavský advent",
+   "place": "s_nam",
+   "type": "trh",
+   "price": null,
+   "priceLabel": null,
+   "tags": [
+    "rodina"
+   ],
+   "desc": "Termín podle infocentra Sázava. Program na rok 2026 zdroj zatím neuvádí. Loni byl trh 13–18 h a strom se rozsvěcel v 17 h.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-29T00:00",
+     "2026-11-29T23:59"
+    ]
+   ],
+   "src": "https://www.kudyznudy.cz/turisticka-informacni-centra/stredocesky-kraj/informacni-a-kulturni-centrum-sazava",
+   "srcName": "Kudy z nudy",
+   "noTime": true
+  },
+  {
+   "title": "Předvánoční jarmark ve Zruči nad Sázavou",
+   "place": "zruc",
+   "type": "trh",
+   "price": 0,
+   "priceLabel": null,
+   "tags": [
+    "rodina"
+   ],
+   "desc": "Jarmark u zámku. Čas zdroj neuvádí.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-29T00:00",
+     "2026-11-29T23:59"
+    ]
+   ],
+   "src": "https://www.zamek-zruc.cz/udalosti/predvanocni-jarmark-ve-zruci-nad-sazavou-29112026",
+   "srcName": "zamek-zruc.cz",
+   "noTime": true
+  },
+  {
+   "title": "Vánoční stezka zručským parkem",
+   "place": "zruc",
+   "type": "priroda",
+   "price": 0,
+   "priceLabel": null,
+   "tags": [
+    "rodina",
+    "děti"
+   ],
+   "desc": "Volně přístupná stezka zámeckým parkem.",
+   "allDay": true,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-29T00:00",
+     "2027-01-07T23:59"
+    ]
+   ],
+   "src": "https://www.zamek-zruc.cz/udalosti/vanocni-stezka-zrucskym-parkem-29112026-712027",
+   "srcName": "zamek-zruc.cz"
+  },
+  {
+   "title": "Adventní koncert: Roháči z Lokte",
+   "place": "zruc",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Předprodej v infocentru Zruč nad Sázavou.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-04T18:00",
+     "2026-12-04T20:00"
+    ]
+   ],
+   "src": "https://www.zamek-zruc.cz/udalosti/adventni-koncert-rohaci-z-lokte-4122026",
+   "srcName": "zamek-zruc.cz"
+  },
+  {
+   "title": "Čerti na zámku",
+   "place": "zruc",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [
+    "rodina",
+    "děti"
+   ],
+   "desc": "Nutná registrace předem. Čas zdroj neuvádí.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-05T00:00",
+     "2026-12-05T23:59"
+    ]
+   ],
+   "src": "https://www.zamek-zruc.cz/udalosti/certi-na-zamku-5122026",
+   "srcName": "zamek-zruc.cz",
+   "noTime": true
+  },
+  {
+   "title": "Adventní koncert: Diogenes",
+   "place": "zruc",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Předprodej v infocentru Zruč nad Sázavou.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-11T19:00",
+     "2026-12-11T21:00"
+    ]
+   ],
+   "src": "https://www.zamek-zruc.cz/udalosti/adventni-koncert-diogenes-11122026",
+   "srcName": "zamek-zruc.cz"
+  },
+  {
+   "title": "Zručský adventní běh",
+   "place": "zruc",
+   "type": "sport",
+   "price": null,
+   "priceLabel": null,
+   "tags": [
+    "sport"
+   ],
+   "desc": "Čas startu zdroj neuvádí.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-12T00:00",
+     "2026-12-12T23:59"
+    ]
+   ],
+   "src": "https://www.zamek-zruc.cz/udalosti/zrucsky-adventni-beh-12122026",
+   "srcName": "zamek-zruc.cz",
+   "noTime": true
+  },
+  {
+   "title": "Jaroslav Dušek: Vnitřní klíče",
+   "place": "s_hut",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Představení Jaroslava Duška a Patrika Kee. Čas zdroj neuvádí.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-13T00:00",
+     "2026-12-13T23:59"
+    ]
+   ],
+   "src": "https://hutfrantisek.cz/udalost/vnitrni-klice-5/",
+   "srcName": "hutfrantisek.cz",
+   "noTime": true
+  },
+  {
+   "title": "Jaroslav Dušek: Čtyři dohody a Pátá dohoda",
+   "place": "s_hut",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Divadelní představení. Čas zdroj neuvádí.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-19T00:00",
+     "2026-12-19T23:59"
+    ]
+   ],
+   "src": "https://hutfrantisek.cz/udalost/ctyri-dohody-a-pata-dohoda-4/",
+   "srcName": "hutfrantisek.cz",
+   "noTime": true
+  },
+  {
+   "title": "Adventní koncert ZUŠ",
+   "place": "zruc",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Čas zdroj neuvádí.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-21T00:00",
+     "2026-12-21T23:59"
+    ]
+   ],
+   "src": "https://www.zamek-zruc.cz/udalosti/adventni-koncert-zus-21122026",
+   "srcName": "zamek-zruc.cz",
+   "noTime": true
   }
  ]
 }

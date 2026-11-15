@@ -23,6 +23,7 @@ const routes = {}; // "lat,lon|mode" -> {placeId:{km,min}}
 
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const safeUrl = u => { try{ const x=new URL(u,location.href); return /^https?:$/.test(x.protocol)? x.href : '#'; }catch(e){ return '#'; } };
 const say = t => { $('msg').textContent = t || ''; };
 
 // ---------- geo ----------
@@ -111,6 +112,7 @@ function renderControls(now){
 const priceText = ev => ev.priceLabel || (ev.price===0?'zdarma':ev.price?ev.price+' Kč':'zdroj cenu neuvádí');
 function whenCell(r,now){
   const {ev,o,live}=r;
+  if(ev.noTime) return '<span>'+dayShort(o.s,now)+'</span><b>?</b><span>čas neuveden</span>';
   if(ev.allDay) return '<span>'+(live?'Probíhá':dayShort(o.s,now))+'</span><b>celý den</b><span>do '+dm(o.e)+'</span>';
   if(live) return '<span>Dnes</span><b>Teď</b><span>do '+hm(o.e)+'</span>';
   return '<span>'+dayShort(o.s,now)+'</span><b>'+hm(o.s)+'</b><span>'+(ev.openEnd?'začátek':'do '+hm(o.e))+'</span>';
@@ -138,12 +140,12 @@ function card(r,now){
    +ev.tags.map(t=>'<span class="tag">'+esc(t)+'</span>').join('')
    +'<span class="more">detail</span></div></div></summary>'
    +'<div class="detail">'
-   +(ev.poster?'<img class="poster" loading="lazy" alt="Plakát akce '+esc(ev.title)+'" src="'+esc(ev.poster)+'">':'')
+   +(ev.poster?'<img class="poster" loading="lazy" alt="Plakát akce '+esc(ev.title)+'" src="'+esc(safeUrl(ev.poster))+'">':'')
    +'<div><p>'+esc(ev.desc)+'</p>'
    +'<p><b>Vstupné:</b> '+esc(priceText(ev))+'</p>'
    +(more.length?'<p><b>Další termíny:</b> '+more.map(x=>dm(x.s)).join(', ')+'</p>':'')
    +'<p><a href="https://mapy.com/fnc/v1/route?end='+p.lon+','+p.lat+'&routeType='+MODES[st.mode].rt+'" target="_blank" rel="noopener">Navigovat ↗</a> · '
-   +'<a href="'+esc(ev.src)+'" target="_blank" rel="noopener">Zdroj: '+esc(ev.srcName)+' ↗</a></p></div>'
+   +'<a href="'+esc(safeUrl(ev.src))+'" target="_blank" rel="noopener">Zdroj: '+esc(ev.srcName)+' ↗</a></p></div>'
    +'</div></details>';
 }
 function renderList(now){
@@ -235,7 +237,8 @@ $('gps').onclick=()=>{
   try{
     const d=await (await fetch('events.json',{cache:'no-cache'})).json();
     ORIGINS=d.origins; P=d.places;
-    EVENTS=d.events.filter(e=>P[e.place]).map((e,i)=>({...e,id:i,tags:e.tags||[],o:e.occ.map(([s,x])=>({s:new Date(s),e:new Date(x)}))}));
+    EVENTS=d.events.filter(e=>P[e.place]).map((e,i)=>({...e,id:i,allDay:!!(e.allDay||e.noTime),tags:e.tags||[],o:e.occ.map(([s,x])=>({s:new Date(s),e:new Date(x)}))}));
+    if(window.SITE_NAME){ $('siteName').textContent=window.SITE_NAME; document.title=window.SITE_NAME+': co se děje okolo'; }
     $('upd').textContent=dm(new Date(d.updated+'T12:00'))+' '+d.updated.slice(0,4);
     $('originList').innerHTML=ORIGINS.map(o=>'<option value="'+esc(o.name)+'">').join('');
     st.origin=ORIGINS[0]; $('origin').value=st.origin.name;
