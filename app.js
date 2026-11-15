@@ -15,7 +15,7 @@ const MODES = {
   auto:{n:'Autem', rt:'car_fast', opts:[['15','15 min'],['30','30 min'],['45','45 min'],['x','Vše']]}
 };
 const TIMES = [['now','Teď a brzy'],['today','Dnes'],['tomorrow','Zítra'],['weekend','Víkend'],['14','14 dní'],['all','Vše']];
-const ZONES = [['here','Přímo tady',1.5],['near','Blízké okolí',12],['far','Širší okolí',1e9]];
+const ZONES = [['here','Přímo tady',1.5],['near','Blízké okolí',15],['far','Širší okolí',1e9]];
 
 let ORIGINS = [], P = {}, EVENTS = [];
 const st = {origin:null, time:'14', mode:'auto', reach:'x', types:new Set(), free:false, kids:false, place:null, open:new Set()};
