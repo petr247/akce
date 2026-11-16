@@ -140,6 +140,7 @@ function card(r,now){
    +'<p><b>Vstupné:</b> '+esc(priceText(ev))+'</p>'
    +(more.length?'<p><b>Další termíny:</b> '+more.map(x=>dm(x.s)).join(', ')+'</p>':'')
    +'<p><a href="https://mapy.com/fnc/v1/route?end='+p.lon+','+p.lat+'&routeType='+MODES[st.mode].rt+'" target="_blank" rel="noopener">Navigovat ↗</a> · '
+   +(ev.posterFull&&!ev.poster?'<a href="'+esc(safeUrl(ev.posterFull))+'" target="_blank" rel="noopener">Plakát ↗</a> · ':'')
    +'<a href="'+esc(safeUrl(ev.src))+'" target="_blank" rel="noopener">Zdroj: '+esc(ev.srcName)+' ↗</a></p></div>'
    +'</div></details>';
 }

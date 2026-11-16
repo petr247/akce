@@ -141,10 +141,34 @@
    "lon": 15.10145
   },
   "ostredek": {
-   "name": "Obecní společenský sál",
+   "name": "Obecní společenský sál, Ostředek č. p. 43",
    "town": "Ostředek",
    "lat": 49.83474,
    "lon": 14.83348
+  },
+  "kacina": {
+   "name": "Zámek Kačina",
+   "town": "Svatý Mikuláš u Kutné Hory",
+   "lat": 49.9825,
+   "lon": 15.344
+  },
+  "kacov_nam": {
+   "name": "Náměstí",
+   "town": "Kácov",
+   "lat": 49.77787,
+   "lon": 15.02789
+  },
+  "kacov_bisport": {
+   "name": "Klubovna Bisportu, Kácov 158",
+   "town": "Kácov",
+   "lat": 49.77787,
+   "lon": 15.02789
+  },
+  "r_potraviny": {
+   "name": "Před potravinami",
+   "town": "Rataje nad Sázavou",
+   "lat": 49.84185,
+   "lon": 14.95672
   }
  },
  "events": [
@@ -309,7 +333,7 @@
     "rodina",
     "děti"
    ],
-   "desc": "Pohádky v kapli v 10:00, 11:00 a 12:00.",
+   "desc": "Divadelní představení ochotnického spolku Matouš v zámecké kapli v 10:00, 11:00 a 12:00.",
    "allDay": false,
    "openEnd": false,
    "poster": "https://www.obecrataje.cz/evt_image.php?img=2024&width=765&height=1081",
@@ -414,7 +438,7 @@
   },
   {
    "title": "Rozsvěcení vánočního stromu",
-   "place": "r_obec",
+   "place": "r_potraviny",
    "type": "kultura",
    "price": null,
    "priceLabel": null,
@@ -422,10 +446,10 @@
     "rodina",
     "děti"
    ],
-   "desc": "Vystoupí děti z mateřské školy. Soutěž o nejlepší vánoční cukroví.",
+   "desc": "Vystoupí děti z mateřské školy s hudebním programem. Soutěž o nejlepší vanilkové rohlíčky: vzorky se nosí do prodejny potravin v sobotu 28. 11. mezi 7:00 a 11:00.",
    "allDay": false,
    "openEnd": false,
-   "poster": "https://www.obecrataje.cz/evt_image.php?img=2032&width=765&height=1081",
+   "poster": "https://www.obecrataje.cz/evt_image.php?img=2026&width=765&height=1081",
    "occ": [
     [
      "2026-11-28T17:00",
@@ -434,7 +458,7 @@
    ],
    "src": "https://www.obecrataje.cz/zivot-v-obci/kalendar-akci/rozsveceni-vanocniho-stromu-762_427cs.html",
    "srcName": "obecrataje.cz",
-   "posterFull": "https://www.obecrataje.cz/evt_image.php?img=2032"
+   "posterFull": "https://www.obecrataje.cz/evt_image.php?img=2026"
   },
   {
    "title": "Adventní trhy na nádvoří Vlašského dvora",
@@ -475,8 +499,8 @@
    "title": "Adventní minijarmark a dílničky pro děti",
    "place": "stern",
    "type": "trh",
-   "price": null,
-   "priceLabel": "dle ceníku hradu",
+   "price": 300,
+   "priceLabel": "dospělí 300 Kč, děti 150 Kč, senioři a mládež 250 Kč",
    "tags": [
     "rodina",
     "děti"
@@ -533,8 +557,8 @@
    "title": "Adventní a vánoční prohlídky hradu",
    "place": "stern",
    "type": "hrad",
-   "price": null,
-   "priceLabel": "dle ceníku hradu",
+   "price": 300,
+   "priceLabel": "dospělí 300 Kč, děti 150 Kč, senioři a mládež 250 Kč",
    "tags": [
     "rodina"
    ],
@@ -567,13 +591,13 @@
    "title": "Tomáš Hanák: Kuba – ráj na zemi?",
    "place": "s_kd",
    "type": "kultura",
-   "price": null,
+   "price": 290,
    "priceLabel": null,
    "tags": [],
-   "desc": "Cestopisná one-man-show. Vstupenky přes GoOut.",
+   "desc": "Cestopisná one-man-show s fotografiemi a vyprávěním. Předprodej vstupenek online na GoOut.",
    "allDay": false,
    "openEnd": true,
-   "poster": null,
+   "poster": "https://static.posazavi.com/Pictures/RelatedEventImages/2026/9/3/c39535.png",
    "occ": [
     [
      "2026-11-20T19:30",
@@ -581,7 +605,8 @@
     ]
    ],
    "src": "https://klastersazava.posazavi.com/cz/kalendar-akci/46365-cestopisna-one-man-show-tomase-hanaka-kuba-raj-na-zemi.html",
-   "srcName": "posazavi.com"
+   "srcName": "posazavi.com",
+   "posterFull": "https://static.posazavi.com/Pictures/RelatedEventImages/2026/9/3/c39535.png"
   },
   {
    "title": "Galavečer boxu",
@@ -607,13 +632,13 @@
    "title": "Poslední snídaně U Lípy",
    "place": "ostredek",
    "type": "kultura",
-   "price": null,
+   "price": 120,
    "priceLabel": null,
    "tags": [],
-   "desc": "Obecní společenský sál, Ostředek 60.",
+   "desc": "Detektivní komedie plná záhad a smíchu. Pořádá TJ Sokol Ostředek. Údaje přečteny z plakátu.",
    "allDay": false,
    "openEnd": true,
-   "poster": null,
+   "poster": "https://static.posazavi.com/Pictures/RelatedEventImages/2026/11/9/c40372.jpg",
    "occ": [
     [
      "2026-11-21T19:00",
@@ -621,7 +646,8 @@
     ]
    ],
    "src": "https://klastersazava.posazavi.com/cz/kalendar-akci/46870-posledni-snidane-u-lipy.html",
-   "srcName": "posazavi.com"
+   "srcName": "posazavi.com",
+   "posterFull": "https://static.posazavi.com/Pictures/RelatedEventImages/2026/11/9/c40372.jpg"
   },
   {
    "title": "Rozsvícení Františka",
@@ -669,26 +695,27 @@
   },
   {
    "title": "Rozsvícení vánočního stromku v Kácově",
-   "place": "kacov",
+   "place": "kacov_nam",
    "type": "kultura",
    "price": null,
    "priceLabel": null,
    "tags": [
-    "rodina"
+    "rodina",
+    "děti"
    ],
-   "desc": "Čas, místo ani program web městyse zatím neuvádí.",
+   "desc": "14:00 program pro děti (dílničky, psaní dopisu Ježíškovi, malování na obličej, vystoupení dětí z MŠ, taneční skupina LUNO), 16:00 kapela Paragraf 202, 17:00 mikulášská nadílka, 18:00 rozsvícení stromečku. Program přečten z plakátu.",
    "allDay": false,
    "openEnd": false,
-   "poster": null,
+   "poster": "https://kacov.cz/clanky/img/aktuality-2026/IMG-20261105-WA0001.jpg",
    "occ": [
     [
-     "2026-11-28T00:00",
-     "2026-11-28T23:59"
+     "2026-11-28T14:00",
+     "2026-11-28T18:30"
     ]
    ],
    "src": "https://kacov.cz/index.php?aktualita=rozsviceni-vanocniho-2701&id=aktuality",
    "srcName": "kacov.cz",
-   "noTime": true
+   "noTime": false
   },
   {
    "title": "Sázavský advent",
@@ -718,23 +745,24 @@
    "place": "zruc",
    "type": "trh",
    "price": 0,
-   "priceLabel": null,
+   "priceLabel": "jarmark zdarma, prohlídky zámku 200 / 150 Kč",
    "tags": [
-    "rodina"
+    "rodina",
+    "děti"
    ],
-   "desc": "Jarmark u zámku. Čas zdroj neuvádí.",
+   "desc": "Zručský dvůr u zámku. 13:00 otevření, 13:10 vystoupení ZUŠ, 13:30 a 15:30 vánoční prohlídka zámku (doporučena rezervace), 14:30 taneční kroužek ZŠ, 15:15 loutkové divadlo Kašpárek v pekle, 17:00 zpívání koled, 17:10 rozsvícení stromečku. Program přečten z plakátu.",
    "allDay": false,
    "openEnd": false,
-   "poster": null,
+   "poster": "https://www.zamek-zruc.cz/files/2535-predvanocni-jarmark.png",
    "occ": [
     [
-     "2026-11-29T00:00",
-     "2026-11-29T23:59"
+     "2026-11-29T13:00",
+     "2026-11-29T17:30"
     ]
    ],
    "src": "https://www.zamek-zruc.cz/udalosti/predvanocni-jarmark-ve-zruci-nad-sazavou-29112026",
    "srcName": "zamek-zruc.cz",
-   "noTime": true
+   "noTime": false
   },
   {
    "title": "Vánoční stezka zručským parkem",
@@ -789,7 +817,7 @@
     "rodina",
     "děti"
    ],
-   "desc": "Nutná registrace předem. Čas zdroj neuvádí.",
+   "desc": "Zámecký příkop se promění v peklo, děti plní čertovské úkoly a dostanou nadílku od Mikuláše. Nutná registrace na certinazamku.cz. Čas zdroj neuvádí.",
    "allDay": false,
    "openEnd": false,
    "poster": null,
@@ -850,43 +878,43 @@
    "title": "Jaroslav Dušek: Vnitřní klíče",
    "place": "s_hut",
    "type": "kultura",
-   "price": null,
+   "price": 555,
    "priceLabel": null,
    "tags": [],
-   "desc": "Představení Jaroslava Duška a Patrika Kee. Čas zdroj neuvádí.",
+   "desc": "Představení Jaroslava Duška a Patrika Kee. Délka 120 minut bez přestávky.",
    "allDay": false,
    "openEnd": false,
-   "poster": null,
+   "poster": "https://hutfrantisek.cz/wp-content/uploads/2026/05/vnitrni-klice1.jpg",
    "occ": [
     [
-     "2026-12-13T00:00",
-     "2026-12-13T23:59"
+     "2026-12-13T19:00",
+     "2026-12-13T21:00"
     ]
    ],
    "src": "https://hutfrantisek.cz/udalost/vnitrni-klice-5/",
    "srcName": "hutfrantisek.cz",
-   "noTime": true
+   "noTime": false
   },
   {
    "title": "Jaroslav Dušek: Čtyři dohody a Pátá dohoda",
    "place": "s_hut",
    "type": "kultura",
-   "price": null,
+   "price": 490,
    "priceLabel": null,
    "tags": [],
-   "desc": "Divadelní představení. Čas zdroj neuvádí.",
+   "desc": "Divadelní představení Jaroslava Duška.",
    "allDay": false,
-   "openEnd": false,
+   "openEnd": true,
    "poster": null,
    "occ": [
     [
-     "2026-12-19T00:00",
-     "2026-12-19T23:59"
+     "2026-12-19T19:00",
+     "2026-12-19T21:00"
     ]
    ],
    "src": "https://hutfrantisek.cz/udalost/ctyri-dohody-a-pata-dohoda-4/",
    "srcName": "hutfrantisek.cz",
-   "noTime": true
+   "noTime": false
   },
   {
    "title": "Adventní koncert ZUŠ",
@@ -908,6 +936,204 @@
    "src": "https://www.zamek-zruc.cz/udalosti/adventni-koncert-zus-21122026",
    "srcName": "zamek-zruc.cz",
    "noTime": true
+  },
+  {
+   "title": "Rozsvícení vánočního stromu a školní vánoční trhy",
+   "place": "kacov",
+   "type": "trh",
+   "price": null,
+   "priceLabel": null,
+   "tags": [
+    "rodina",
+    "děti"
+   ],
+   "desc": "Před budovou 2. stupně ZŠ Kácov. Slovo starostky a ředitele, vystoupení dětí z MŠ a ZŠ, občerstvení a školní vánoční trhy. Údaje přečteny z plakátu.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-27T17:00",
+     "2026-11-27T19:00"
+    ]
+   ],
+   "src": "https://kacov.cz/index.php?id=aktuality&aktualita=vanocni-trhy",
+   "srcName": "kacov.cz",
+   "posterFull": "https://kacov.cz/clanky/soubory/aktuality-2026/vanocni_trhy_2026_plakat.pdf"
+  },
+  {
+   "title": "Česko zpívá koledy v Kácově",
+   "place": "kacov_nam",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [
+    "rodina"
+   ],
+   "desc": "U stromku na náměstí. Společné zpívání koled s hudebním doprovodem, svařák. Doporučují vzít si svítilnu na čtení textů. Údaje přečteny z plakátu.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-09T18:00",
+     "2026-12-09T19:00"
+    ]
+   ],
+   "src": "https://kacov.cz/index.php?id=aktuality&aktualita=cesko-zpiva-koledy-2700",
+   "srcName": "kacov.cz",
+   "noTime": false,
+   "posterFull": "https://kacov.cz/clanky/soubory/aktuality-2026/Cesko_zpiva_koledy_2026.pdf"
+  },
+  {
+   "title": "Jaroslav Dušek: Čtyři dohody",
+   "place": "s_hut",
+   "type": "kultura",
+   "price": 490,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Divadelní představení podle knihy Dona Miguela Ruize.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": "https://hutfrantisek.cz/wp-content/uploads/2026/07/ctyry_dohody_jaroslav_dusek-1-900x505.jpg",
+   "occ": [
+    [
+     "2026-12-18T19:00",
+     "2026-12-18T21:00"
+    ]
+   ],
+   "src": "https://hutfrantisek.cz/udalost/ctyri-dohody-3/",
+   "srcName": "hutfrantisek.cz",
+   "noTime": false
+  },
+  {
+   "title": "Oslava svátku sv. Barbory a rozsvícení vánočního stromu",
+   "place": "kh_pal",
+   "type": "kultura",
+   "price": 0,
+   "priceLabel": null,
+   "tags": [
+    "rodina"
+   ],
+   "desc": "Slavnostní rozsvícení stromu na Palackého náměstí, akce trvá asi 3 hodiny. Přesný čas zdroj zatím neuvádí.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-04T00:00",
+     "2026-12-04T23:59"
+    ]
+   ],
+   "src": "https://www.kudyznudy.cz/akce/oslava-svatku-sv-barbory-a-rozsviceni-vanocniho-s",
+   "srcName": "Kudy z nudy",
+   "noTime": true
+  },
+  {
+   "title": "Vánoce na Kačině",
+   "place": "kacina",
+   "type": "hrad",
+   "price": 200,
+   "priceLabel": "základní 200 Kč, snížené 150 Kč, rodinné 450 Kč",
+   "tags": [
+    "rodina"
+   ],
+   "desc": "Vánočně vyzdobené interiéry zámku, zámecká kavárna, park volně přístupný. O adventních nedělích doprovodný program a zapalování svíce v 16:00.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-28T10:00",
+     "2026-11-28T16:00"
+    ],
+    [
+     "2026-11-29T10:00",
+     "2026-11-29T16:00"
+    ],
+    [
+     "2026-12-05T10:00",
+     "2026-12-05T16:00"
+    ],
+    [
+     "2026-12-06T10:00",
+     "2026-12-06T16:00"
+    ],
+    [
+     "2026-12-12T10:00",
+     "2026-12-12T16:00"
+    ],
+    [
+     "2026-12-13T10:00",
+     "2026-12-13T16:00"
+    ],
+    [
+     "2026-12-19T10:00",
+     "2026-12-19T16:00"
+    ],
+    [
+     "2026-12-20T10:00",
+     "2026-12-20T16:00"
+    ],
+    [
+     "2026-12-26T10:00",
+     "2026-12-26T16:00"
+    ],
+    [
+     "2026-12-27T10:00",
+     "2026-12-27T16:00"
+    ],
+    [
+     "2026-12-28T10:00",
+     "2026-12-28T16:00"
+    ],
+    [
+     "2026-12-29T10:00",
+     "2026-12-29T16:00"
+    ],
+    [
+     "2026-12-30T10:00",
+     "2026-12-30T16:00"
+    ],
+    [
+     "2026-12-31T10:00",
+     "2026-12-31T16:00"
+    ],
+    [
+     "2027-01-02T10:00",
+     "2027-01-02T16:00"
+    ],
+    [
+     "2027-01-03T10:00",
+     "2027-01-03T16:00"
+    ]
+   ],
+   "src": "https://www.kudyznudy.cz/akce/vanoce-na-kacine?datum=2026-11-29",
+   "srcName": "Kudy z nudy"
+  },
+  {
+   "title": "Vánoční jarmark v Kácově",
+   "place": "kacov_bisport",
+   "type": "trh",
+   "price": 0,
+   "priceLabel": "vstupné dobrovolné",
+   "tags": [
+    "rodina",
+    "děti"
+   ],
+   "desc": "Předvánoční tvoření, vystoupení dětské taneční skupiny, občerstvení, prodej vánočních dekorací a cukroví. Údaje přečteny z plakátu.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": null,
+   "posterFull": "https://kacov.cz/clanky/soubory/aktuality-2026/Vanocni_jarmark_Bisport_26.pdf",
+   "occ": [
+    [
+     "2026-11-21T14:00",
+     "2026-11-21T17:00"
+    ]
+   ],
+   "src": "https://kacov.cz/index.php?id=aktuality&aktualita=vanocni-jarmark-v-2704",
+   "srcName": "kacov.cz"
   }
  ]
 }
