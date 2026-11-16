@@ -1,5 +1,5 @@
 {
- "popis": "Registr zdrojů pro pilot Ratajsko. Stav k 15. 11. 2026. Robot bude tento seznam procházet denně.",
+ "popis": "Registr zdrojů pro pilot Ratajsko. Stav k 16. 11. 2026.",
  "vrstvy": {
   "1_agregatory": [
    {
@@ -32,7 +32,7 @@
     "obec": "Kácov",
     "url": "https://kacov.cz/index.php?id=aktuality",
     "stav": "čitelné",
-    "pozn": "akce jsou v aktualitách, často bez času"
+    "pozn": "akce jsou v aktualitách; čas a místo bývají jen na plakátu (PDF nebo obrázek), některé aktuality nejsou akce (slevy, odstávky)"
    },
    {
     "obec": "Sázava",
