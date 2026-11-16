@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15",
+ "updated": "2026-11-16",
  "origins": [
   {
    "name": "Rataje nad Sázavou",
@@ -288,7 +288,7 @@
    "desc": "Kapela Hobluj, krátký film s hudebním doprovodem Petra Wajsara, dobré nápoje. Pořádá Spolek přátel Pivovárku.",
    "allDay": false,
    "openEnd": false,
-   "poster": "posters/pivo.jpg",
+   "poster": "https://www.obecrataje.cz/evt_image.php?img=2031&width=765&height=1147",
    "occ": [
     [
      "2026-11-17T17:00",
@@ -296,7 +296,8 @@
     ]
    ],
    "src": "https://www.obecrataje.cz/zivot-v-obci/kalendar-akci/pivovarek-zije-764_429cs.html",
-   "srcName": "obecrataje.cz"
+   "srcName": "obecrataje.cz",
+   "posterFull": "https://www.obecrataje.cz/evt_image.php?img=2031"
   },
   {
    "title": "Předvánoční jarmark a pásmo krátkých pohádek",
@@ -311,7 +312,7 @@
    "desc": "Pohádky v kapli v 10:00, 11:00 a 12:00.",
    "allDay": false,
    "openEnd": false,
-   "poster": null,
+   "poster": "https://www.obecrataje.cz/evt_image.php?img=2024&width=765&height=1081",
    "occ": [
     [
      "2026-11-21T10:00",
@@ -319,7 +320,8 @@
     ]
    ],
    "src": "https://www.obecrataje.cz/zivot-v-obci/kalendar-akci/predvanocni-jarmark-a-pasmo-kratkych-pohadek-759_424cs.html",
-   "srcName": "obecrataje.cz"
+   "srcName": "obecrataje.cz",
+   "posterFull": "https://www.obecrataje.cz/evt_image.php?img=2024"
   },
   {
    "title": "Vánoční tvoření v sokolovně",
@@ -354,7 +356,7 @@
    "desc": "Hraje Divadelní spolek Matouš.",
    "allDay": false,
    "openEnd": false,
-   "poster": "posters/divadlo.jpg",
+   "poster": "https://www.obecrataje.cz/evt_image.php?img=2025&width=718&height=986",
    "occ": [
     [
      "2026-11-21T19:00",
@@ -362,7 +364,8 @@
     ]
    ],
    "src": "https://www.obecrataje.cz/zivot-v-obci/kalendar-akci/divadelni-predstaveni-760_425cs.html",
-   "srcName": "obecrataje.cz"
+   "srcName": "obecrataje.cz",
+   "posterFull": "https://www.obecrataje.cz/evt_image.php?img=2025"
   },
   {
    "title": "Vánoční výstava Od výlohy ke stromečku",
@@ -422,7 +425,7 @@
    "desc": "Vystoupí děti z mateřské školy. Soutěž o nejlepší vánoční cukroví.",
    "allDay": false,
    "openEnd": false,
-   "poster": null,
+   "poster": "https://www.obecrataje.cz/evt_image.php?img=2032&width=765&height=1081",
    "occ": [
     [
      "2026-11-28T17:00",
@@ -430,7 +433,8 @@
     ]
    ],
    "src": "https://www.obecrataje.cz/zivot-v-obci/kalendar-akci/rozsveceni-vanocniho-stromu-762_427cs.html",
-   "srcName": "obecrataje.cz"
+   "srcName": "obecrataje.cz",
+   "posterFull": "https://www.obecrataje.cz/evt_image.php?img=2032"
   },
   {
    "title": "Adventní trhy na nádvoří Vlašského dvora",

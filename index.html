@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://api.mapy.com; connect-src 'self' https://api.mapy.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://api.mapy.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Minute Screen: za minutu víš, co se děje v okolí</title>
 <meta name="description" content="Za minutu víš, co se děje v okolí. Místní akce podle času a dostupnosti, pilot pro Rataje nad Sázavou.">
@@ -102,7 +102,8 @@ select{font:inherit;font-weight:600;color:var(--ink);background:var(--card);bord
 .ev[open] .more{visibility:hidden}
 .detail{border-top:1px solid var(--line);margin-left:5px;padding:12px 14px 14px;display:flex;gap:14px;flex-wrap:wrap;font-size:14px}
 .detail p{margin:0 0 6px;max-width:60ch}
-.poster{width:150px;height:auto;border-radius:8px;border:1px solid var(--line);align-self:flex-start}
+.posterlink{flex:none;line-height:0}
+.poster{width:170px;max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);align-self:flex-start}
 .zone{font-family:var(--display);font-size:20px;margin:22px 0 8px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
 .zone small{font-family:var(--body);font-size:13px;color:var(--muted);font-weight:500}
 .ev .stripe{align-self:stretch}
@@ -153,10 +154,6 @@ footer li{margin-bottom:4px}
 
   <section class="controls" aria-label="Filtry">
     <div class="row" id="timeRow" role="group" aria-label="Kdy"></div>
-    <div class="reach">
-      <div class="seg" id="modeSeg" role="group" aria-label="Jak se dopravím"></div>
-      <div class="seg" id="reachSeg" role="group" aria-label="Jak daleko"></div>
-    </div>
     <div class="row" id="typeRow" role="group" aria-label="Typ akce"></div>
   </section>
 
@@ -174,7 +171,8 @@ footer li{margin-bottom:4px}
     <h2>O pilotu</h2>
     <ul>
       <li>Akce pocházejí z webů obcí, památek a z Kudy z nudy. Každá karta odkazuje na zdroj, kde si údaje ověříš. Data aktualizována <span id="upd"></span>.</li>
-      <li>Vzdálenosti a časy cesty počítá plánovač Mapy.com. Hodnoty označené ≈ jsou jen odhad ze vzdušné čáry.</li>
+      <li>Vzdálenost je délka trasy po silnici podle plánovače Mapy.com. Hodnoty označené ≈ jsou jen odhad ze vzdušné čáry.</li>
+      <li>Plakáty se načítají přímo z webu pořadatele.</li>
       <li>Web neukládá žádné osobní údaje a nepoužívá cookies. Když zadáš místo nebo povolíš polohu, odešlou se jen souřadnice do Mapy.com kvůli výpočtu trasy a mapě.</li>
       <li>Proužek na kartě ukazuje, kdy akce během dne běží (8 až 22 h, rysky ve 12, 16 a 20 h).</li>
     </ul>

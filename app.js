@@ -14,11 +14,11 @@ const MODES = {
   bike:{n:'Na kole', rt:'bike_road', opts:[['15','15 min'],['30','30 min'],['60','60 min'],['x','Vše']]},
   auto:{n:'Autem', rt:'car_fast', opts:[['15','15 min'],['30','30 min'],['45','45 min'],['x','Vše']]}
 };
-const TIMES = [['now','Teď a brzy'],['today','Dnes'],['tomorrow','Zítra'],['weekend','Víkend'],['14','14 dní'],['all','Vše']];
+const TIMES = [['today','Dnes'],['tomorrow','Zítra'],['weekend','Víkend'],['all','Vše']];
 const ZONES = [['here','Přímo tady',1.5],['near','Blízké okolí',15],['far','Širší okolí',1e9]];
 
 let ORIGINS = [], P = {}, EVENTS = [];
-const st = {origin:null, time:'14', mode:'auto', reach:'x', types:new Set(), free:false, kids:false, place:null, open:new Set()};
+const st = {origin:null, time:'all', mode:'auto', reach:'x', types:new Set(), free:false, kids:false, place:null, open:new Set()};
 const routes = {}; // "lat,lon|mode" -> {placeId:{km,min}}
 
 const $ = id => document.getElementById(id);
@@ -38,7 +38,7 @@ const fmtKm = k => k<1 ? Math.max(100,Math.round(k*10)*100)+' m' : (k<10? k.toFi
 const fmtMin = m => m<60 ? Math.max(1,Math.round(m))+' min' : Math.floor(m/60)+' h '+String(Math.round(m%60)).padStart(2,'0')+' min';
 function travelLabel(tr){
   if(tr.km<0.4) return 'jsi na místě';
-  return (tr.est?'≈ ':'')+fmtKm(tr.km)+' · '+fmtMin(tr.min)+' '+({walk:'pěšky',bike:'na kole',auto:'autem'}[st.mode]);
+  return (tr.est?'≈ ':'')+fmtKm(tr.km);
 }
 async function loadRoutes(){
   const k=rkey(); if(routes[k] || !KEY) return;
@@ -58,11 +58,9 @@ const day0 = d => new Date(d.getFullYear(),d.getMonth(),d.getDate());
 const addD = (d,n) => new Date(d.getFullYear(),d.getMonth(),d.getDate()+n);
 function windowFor(key,now){
   const t=day0(now);
-  if(key==='now') return [now,new Date(now.getTime()+3*3600e3)];
   if(key==='today') return [now,addD(t,1)];
   if(key==='tomorrow') return [addD(t,1),addD(t,2)];
   if(key==='weekend'){ const w=t.getDay(); const sat= w===0? addD(t,-1) : addD(t,6-w); return [new Date(Math.max(now,sat)),addD(sat,2)]; }
-  if(key==='14') return [now,addD(t,14)];
   return [now,new Date(2100,0,1)];
 }
 const DS=['ne','po','út','st','čt','pá','so'];
@@ -98,12 +96,9 @@ function btn(label,pressed,on,cls='',extra=''){
 }
 function renderControls(now){
   const tr=$('timeRow'); tr.replaceChildren();
-  for(const [k,n] of TIMES){ const c=rows(now,k).filter(r=>r.ok).length;
-    tr.append(btn(esc(n)+' <small>'+c+'</small>',st.time===k,()=>{st.time=k;render();},'chip time')); }
-  const ms=$('modeSeg'); ms.replaceChildren();
-  for(const k in MODES) ms.append(btn(MODES[k].n,st.mode===k,()=>{st.mode=k;st.reach=k==='walk'?'10':'x';render(true);loadRoutes();}));
-  const rs=$('reachSeg'); rs.replaceChildren();
-  for(const [k,n] of MODES[st.mode].opts) rs.append(btn(n,st.reach===k,()=>{st.reach=k;render(true);}));
+  for(const [k,n] of TIMES){ const c=rows(now,k).length; let label=n;
+    if(k==='weekend'){ const [,e]=windowFor('weekend',now), sat=addD(e,-2), sun=addD(e,-1); label=n+' '+sat.getDate()+'.–'+dm(sun); }
+    tr.append(btn(esc(label)+' <small>'+c+'</small>',st.time===k,()=>{st.time=k;render(true);},'chip time')); }
   const ty=$('typeRow'); ty.replaceChildren();
   for(const k in TYPES) ty.append(btn(TYPES[k].n,st.types.has(k),()=>{st.types.has(k)?st.types.delete(k):st.types.add(k);render();},'chip','<span class="dot" style="background:'+TYPES[k].c+'"></span>'));
   ty.append(btn('Pro děti',st.kids,()=>{st.kids=!st.kids;render();},'chip'));
@@ -140,7 +135,7 @@ function card(r,now){
    +ev.tags.map(t=>'<span class="tag">'+esc(t)+'</span>').join('')
    +'<span class="more">detail</span></div></div></summary>'
    +'<div class="detail">'
-   +(ev.poster?'<img class="poster" loading="lazy" alt="Plakát akce '+esc(ev.title)+'" src="'+esc(safeUrl(ev.poster))+'">':'')
+   +(ev.poster?'<a class="posterlink" href="'+esc(safeUrl(ev.posterFull||ev.poster))+'" target="_blank" rel="noopener"><img class="poster" loading="lazy" referrerpolicy="no-referrer" alt="Plakát akce '+esc(ev.title)+'" src="'+esc(safeUrl(ev.poster))+'"></a>':'')
    +'<div><p>'+esc(ev.desc)+'</p>'
    +'<p><b>Vstupné:</b> '+esc(priceText(ev))+'</p>'
    +(more.length?'<p><b>Další termíny:</b> '+more.map(x=>dm(x.s)).join(', ')+'</p>':'')
@@ -152,7 +147,7 @@ function renderList(now){
   const all=rows(now), inReach=all.filter(r=>r.ok && (!st.place || st.place.includes(r.ev.place)));
   const out=all.length-all.filter(r=>r.ok).length, n=inReach.length;
   $('count').innerHTML='<b>'+n+'</b> '+(n>=1&&n<=4?'akce':'akcí')
-    +(st.place?' · <a href="#" id="clr">zrušit výběr na mapě</a>':'')+(out?' · '+out+' mimo zvolený dosah':'');
+    +(st.place?' · <a href="#" id="clr">zrušit výběr na mapě</a>':'');
   const c=$('clr'); if(c) c.onclick=e=>{e.preventDefault();st.place=null;render();};
   const L=$('list');
   if(!n){ L.innerHTML='<div class="empty"><b>V tomhle výběru nic není.</b> Zkus delší časové okno, větší dosah nebo méně filtrů.</div>'; return; }
@@ -163,6 +158,7 @@ function renderList(now){
     html+='<h2 class="zone">'+name+' <small>'+esc(towns.join(', '))+' · '+zr.length+'</small></h2><div class="list">'+zr.map(r=>card(r,now)).join('')+'</div>';
   }
   L.innerHTML=html;
+  L.querySelectorAll('img.poster').forEach(i=>i.onerror=()=>i.closest('.posterlink').remove());
   L.querySelectorAll('details.ev').forEach(d=>d.ontoggle=()=>{const id=+d.dataset.id; d.open?st.open.add(id):st.open.delete(id);});
 }
 
