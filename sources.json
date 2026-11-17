@@ -1,5 +1,5 @@
 {
- "popis": "Registr zdrojů pro pilot Ratajsko. Stav k 16. 11. 2026.",
+ "popis": "Registr zdrojů pro pilot Ratajsko. Stav k 17. 11. 2026.",
  "vrstvy": {
   "1_agregatory": [
    {
@@ -55,7 +55,14 @@
    {
     "obec": "Zruč nad Sázavou",
     "url": "https://www.mesto-zruc.cz/volny-cas/kultura/kulturni-akce/",
-    "stav": "neověřeno"
+    "stav": "čitelné",
+    "pozn": "nejúplnější zdroj v okolí: časy, ceny i plakáty; měsíční kulturní kalendář vychází i jako obrázek na kacov.cz"
+   },
+   {
+    "obec": "Stříbrná Skalice",
+    "url": "https://www.stribrnaskalice.cz/zivot-v-obci/kalendar-akci/",
+    "stav": "čitelné",
+    "pozn": "k 17. 11. žádné akce"
    }
   ],
   "3_mista": [
@@ -87,13 +94,23 @@
     "misto": "Zámek Zruč nad Sázavou",
     "url": "https://www.zamek-zruc.cz/akce",
     "stav": "čitelné"
+   },
+   {
+    "misto": "Kulturní dům Sázava (GoOut)",
+    "url": "https://goout.net/cs/sazava/akce/lezqevqkk/",
+    "stav": "čitelné",
+    "pozn": "divadla a koncerty se vstupenkami"
+   },
+   {
+    "misto": "Valenta Rail (výletní vlaky Posázavím)",
+    "url": "https://valenta-rail.cz/vyletni-vlaky/",
+    "stav": "čitelné"
    }
   ]
  },
  "k_provereni": [
   "Ledečko",
   "Samopše a hrad Talmberk",
-  "Stříbrná Skalice",
   "Chocerady",
   "Divišov",
   "Ostředek",
@@ -101,7 +118,6 @@
   "Pivovar Hubertus Kácov",
   "Zámek Kácov",
   "Skanzen Kouřim",
-  "Posázavský Pacifik (zvláštní jízdy vlaků)",
   "sokolovny a SDH v obcích (často jen Facebook)"
  ]
 }

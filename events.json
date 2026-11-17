@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16",
+ "updated": "2026-11-17",
  "origins": [
   {
    "name": "Rataje nad Sázavou",
@@ -119,8 +119,8 @@
   "s_kd": {
    "name": "Kulturní dům Jiřího Voskovce",
    "town": "Sázava",
-   "lat": 49.87517,
-   "lon": 14.90256
+   "lat": 49.87573,
+   "lon": 14.90306
   },
   "s_nam": {
    "name": "Náměstí Voskovce a Wericha",
@@ -148,70 +148,60 @@
   },
   "kacina": {
    "name": "Zámek Kačina",
-   "town": "Svatý Mikuláš u Kutné Hory",
-   "lat": 49.9825,
-   "lon": 15.344
+   "town": "Svatý Mikuláš",
+   "lat": 49.98195,
+   "lon": 15.34587
   },
   "kacov_nam": {
    "name": "Náměstí",
    "town": "Kácov",
-   "lat": 49.77787,
-   "lon": 15.02789
+   "lat": 49.7799,
+   "lon": 15.0289
   },
   "kacov_bisport": {
    "name": "Klubovna Bisportu, Kácov 158",
    "town": "Kácov",
-   "lat": 49.77787,
-   "lon": 15.02789
+   "lat": 49.78615,
+   "lon": 15.02199
   },
   "r_potraviny": {
-   "name": "Před potravinami",
+   "name": "Před potravinami, Hlavní 239",
    "town": "Rataje nad Sázavou",
-   "lat": 49.84185,
-   "lon": 14.95672
+   "lat": 49.84403,
+   "lon": 14.96663
+  },
+  "kacov_zs": {
+   "name": "Před 2. stupněm ZŠ",
+   "town": "Kácov",
+   "lat": 49.78053,
+   "lon": 15.02878
+  },
+  "zruc_spolkovy": {
+   "name": "Spolkový dům, ulice 5. května",
+   "town": "Zruč nad Sázavou",
+   "lat": 49.745,
+   "lon": 15.09358
+  },
+  "zruc_hala": {
+   "name": "Sportovní hala",
+   "town": "Zruč nad Sázavou",
+   "lat": 49.74828,
+   "lon": 15.09698
+  },
+  "zruc_dubina": {
+   "name": "Kulturní dům Dubina",
+   "town": "Zruč nad Sázavou",
+   "lat": 49.7578,
+   "lon": 15.11045
+  },
+  "stern_vlak": {
+   "name": "Železniční zastávka Český Šternberk",
+   "town": "Český Šternberk",
+   "lat": 49.81089,
+   "lon": 14.92815
   }
  },
  "events": [
-  {
-   "title": "Svatomartinský víkend v bistru Maštal",
-   "place": "blato",
-   "type": "gastro",
-   "price": null,
-   "priceLabel": null,
-   "tags": [],
-   "desc": "Husí hody od předkrmů po dezert. Rezervace stolu doporučena. Časy zdroj neuvádí.",
-   "allDay": true,
-   "openEnd": false,
-   "poster": null,
-   "occ": [
-    [
-     "2026-11-13T00:00",
-     "2026-11-15T23:59"
-    ]
-   ],
-   "src": "https://www.farma-blato.cz/svatomartinsky-vikend-v-bistru-mastal/",
-   "srcName": "farma-blato.cz"
-  },
-  {
-   "title": "Svatomartinské hody v Kutné Hoře",
-   "place": "kh_vors",
-   "type": "gastro",
-   "price": null,
-   "priceLabel": null,
-   "tags": [],
-   "desc": "Otevření svatomartinských vín, degustace, husí speciality, přednášky a hudba. Pro dospělé.",
-   "allDay": false,
-   "openEnd": false,
-   "poster": null,
-   "occ": [
-    [
-     "2026-11-14T11:00",
-     "2026-11-14T17:00"
-    ]
-   ],
-   "src": "https://www.kudyznudy.cz/akce/svatomartinske-hody-v-kutne-hore-1",
-   "srcName": "Kudy z nudy"
-  },
   {
    "title": "Prohlídky hradu Český Šternberk",
    "place": "stern",
@@ -794,7 +784,7 @@
    "price": null,
    "priceLabel": null,
    "tags": [],
-   "desc": "Předprodej v infocentru Zruč nad Sázavou.",
+   "desc": "Adventní koncert v Zrcadlovém sále zámku. Předprodej v infocentru Zruč nad Sázavou.",
    "allDay": false,
    "openEnd": true,
    "poster": null,
@@ -811,25 +801,25 @@
    "title": "Čerti na zámku",
    "place": "zruc",
    "type": "kultura",
-   "price": null,
-   "priceLabel": null,
+   "price": 50,
+   "priceLabel": "50 Kč za dítě, dospělí zdarma",
    "tags": [
     "rodina",
     "děti"
    ],
-   "desc": "Zámecký příkop se promění v peklo, děti plní čertovské úkoly a dostanou nadílku od Mikuláše. Nutná registrace na certinazamku.cz. Čas zdroj neuvádí.",
+   "desc": "Zámecký příkop se promění v peklo, děti plní čertovské úkoly a dostanou nadílku od Mikuláše. Nutná rezervace na certinazamku.cz.",
    "allDay": false,
-   "openEnd": false,
+   "openEnd": true,
    "poster": null,
    "occ": [
     [
-     "2026-12-05T00:00",
-     "2026-12-05T23:59"
+     "2026-12-05T16:00",
+     "2026-12-05T18:00"
     ]
    ],
-   "src": "https://www.zamek-zruc.cz/udalosti/certi-na-zamku-5122026",
-   "srcName": "zamek-zruc.cz",
-   "noTime": true
+   "src": "https://www.mesto-zruc.cz/volny-cas/kultura/kulturni-akce/certi-na-zamku-5122026-9642_4033cs.html",
+   "srcName": "mesto-zruc.cz",
+   "noTime": false
   },
   {
    "title": "Adventní koncert: Diogenes",
@@ -838,7 +828,7 @@
    "price": null,
    "priceLabel": null,
    "tags": [],
-   "desc": "Předprodej v infocentru Zruč nad Sázavou.",
+   "desc": "Adventní koncert v Zrcadlovém sále zámku. Předprodej v infocentru Zruč nad Sázavou.",
    "allDay": false,
    "openEnd": true,
    "poster": null,
@@ -855,24 +845,25 @@
    "title": "Zručský adventní běh",
    "place": "zruc",
    "type": "sport",
-   "price": null,
-   "priceLabel": null,
+   "price": 150,
+   "priceLabel": "děti 150 Kč, dospělí 350 Kč (od 1. 12. 250 a 500 Kč)",
    "tags": [
-    "sport"
+    "rodina",
+    "děti"
    ],
-   "desc": "Čas startu zdroj neuvádí.",
+   "desc": "Start u zámku. Dětské běhy na 900 m v 17:00, hlavní závod na 5,5 km v 17:20. Registrace jen online předem, v kostýmu zdarma.",
    "allDay": false,
    "openEnd": false,
    "poster": null,
    "occ": [
     [
-     "2026-12-12T00:00",
-     "2026-12-12T23:59"
+     "2026-12-12T17:00",
+     "2026-12-12T18:30"
     ]
    ],
-   "src": "https://www.zamek-zruc.cz/udalosti/zrucsky-adventni-beh-12122026",
-   "srcName": "zamek-zruc.cz",
-   "noTime": true
+   "src": "https://zrucskyadventnibeh.cz/",
+   "srcName": "zrucskyadventnibeh.cz",
+   "noTime": false
   },
   {
    "title": "Jaroslav Dušek: Vnitřní klíče",
@@ -917,29 +908,31 @@
    "noTime": false
   },
   {
-   "title": "Adventní koncert ZUŠ",
+   "title": "Vánoce v hlasech (koncert ZUŠ)",
    "place": "zruc",
    "type": "kultura",
-   "price": null,
-   "priceLabel": null,
-   "tags": [],
-   "desc": "Čas zdroj neuvádí.",
+   "price": 0,
+   "priceLabel": "vstupné dobrovolné",
+   "tags": [
+    "rodina"
+   ],
+   "desc": "Vánoční koncert ZUŠ Zruč nad Sázavou v Zrcadlovém sále zámku.",
    "allDay": false,
-   "openEnd": false,
+   "openEnd": true,
    "poster": null,
    "occ": [
     [
-     "2026-12-21T00:00",
-     "2026-12-21T23:59"
+     "2026-12-21T17:00",
+     "2026-12-21T18:30"
     ]
    ],
-   "src": "https://www.zamek-zruc.cz/udalosti/adventni-koncert-zus-21122026",
-   "srcName": "zamek-zruc.cz",
-   "noTime": true
+   "src": "https://www.mesto-zruc.cz/volny-cas/kultura/kulturni-akce/vanoce-v-hlasech-21122026-zrcadlovy-sal-zamku-9647_4036cs.html",
+   "srcName": "mesto-zruc.cz",
+   "noTime": false
   },
   {
    "title": "Rozsvícení vánočního stromu a školní vánoční trhy",
-   "place": "kacov",
+   "place": "kacov_zs",
    "type": "trh",
    "price": null,
    "priceLabel": null,
@@ -1134,6 +1127,221 @@
    ],
    "src": "https://kacov.cz/index.php?id=aktuality&aktualita=vanocni-jarmark-v-2704",
    "srcName": "kacov.cz"
+  },
+  {
+   "title": "Výstava obrazů Jolany Čechové",
+   "place": "zruc",
+   "type": "kultura",
+   "price": 30,
+   "priceLabel": "30 Kč, snížené 20 Kč",
+   "tags": [],
+   "desc": "Olejomalby a autorské reprodukce v zámecké galerii. Otevřeno po a st 8–16, út, čt a pá 8–15, o víkendu zavřeno.",
+   "allDay": true,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-10-12T00:00",
+     "2026-11-30T23:59"
+    ]
+   ],
+   "src": "https://kacov.cz/index.php?id=aktuality&aktualita=kulturni-kalendar-zruce-2688",
+   "srcName": "kulturní kalendář Zruče"
+  },
+  {
+   "title": "Volejbal: TJ Jiskra Zruč – Mělník",
+   "place": "zruc_hala",
+   "type": "sport",
+   "price": null,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Turnaj mužů ve sportovní hale.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": null,
+   "occ": [
+    [
+     "2026-11-21T10:00",
+     "2026-11-21T13:00"
+    ]
+   ],
+   "src": "https://kacov.cz/index.php?id=aktuality&aktualita=kulturni-kalendar-zruce-2688",
+   "srcName": "kulturní kalendář Zruče"
+  },
+  {
+   "title": "Rozsvícení vánočního stromu v Dubině",
+   "place": "zruc_dubina",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [
+    "rodina"
+   ],
+   "desc": "Osadní výbor zve na společné zpívání koled, svařák a opečené buřty.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": "https://www.mesto-zruc.cz/evt_image.php?img=61621&width=765&height=1081",
+   "occ": [
+    [
+     "2026-11-28T16:00",
+     "2026-11-28T18:00"
+    ]
+   ],
+   "src": "https://www.mesto-zruc.cz/volny-cas/kultura/kulturni-akce-v-okoli/rozsviceni-vanocniho-stromu-28112026-dubina-9641_4032cs.html",
+   "srcName": "mesto-zruc.cz",
+   "posterFull": "https://www.mesto-zruc.cz/evt_image.php?img=61621"
+  },
+  {
+   "title": "Benin – země vúdú a tajemných rituálů",
+   "place": "zruc_spolkovy",
+   "type": "kultura",
+   "price": 120,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Cestovatelská beseda Josefa Förstera.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": "https://www.mesto-zruc.cz/evt_image.php?img=61631&width=765&height=1081",
+   "occ": [
+    [
+     "2026-12-03T18:30",
+     "2026-12-03T20:30"
+    ]
+   ],
+   "src": "https://www.mesto-zruc.cz/volny-cas/kultura/kulturni-akce/benin-zeme-vudu-a-tajemnych-ritualu-cestovatelska-beseda-3122026-spolkovy-dum-9646_4035cs.html",
+   "srcName": "mesto-zruc.cz",
+   "posterFull": "https://www.mesto-zruc.cz/evt_image.php?img=61631"
+  },
+  {
+   "title": "Kaktusový květ (Divadelní společnost Háta)",
+   "place": "s_kd",
+   "type": "kultura",
+   "price": 650,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Komedie Abe Burrowse v režii Romana Štolpy. Hrají mj. Lukáš Vaculík, Olga Želenská nebo Adéla Gondíková, Ivana Andrlová nebo Pavla Vojáčková.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": "https://goout.net/i/103/1038325-383.jpg",
+   "occ": [
+    [
+     "2026-12-04T19:00",
+     "2026-12-04T21:00"
+    ]
+   ],
+   "src": "https://goout.net/cs/kaktusovy-kvet/szapmgy/",
+   "srcName": "GoOut"
+  },
+  {
+   "title": "Advent na Hrádku",
+   "place": "kh_hrad",
+   "type": "trh",
+   "price": null,
+   "priceLabel": null,
+   "tags": [
+    "rodina",
+    "děti"
+   ],
+   "desc": "Tvořivé dílny, ukázky řemesel, koledy a svařák. Pekelné sklepení s čerty a nadílkou 13–16 h, loutkové divadlo ve 13:30 a 15:30. Rezervace přes odkaz na stránce akce.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-05T13:00",
+     "2026-12-05T16:00"
+    ]
+   ],
+   "src": "https://www.kudyznudy.cz/akce/advent-na-hradku-2",
+   "srcName": "Kudy z nudy"
+  },
+  {
+   "title": "Filmový kvíz",
+   "place": "zruc_hala",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Kvíz pro týmy v bufetu sportovní haly. Týmy se hlásí předem přes QR kód na plakátu. Cenu zdroj neuvádí, listopadový kvíz stál 120 Kč za tým.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-09T18:00",
+     "2026-12-09T20:30"
+    ],
+    [
+     "2027-01-13T18:00",
+     "2027-01-13T20:30"
+    ]
+   ],
+   "src": "https://www.mesto-zruc.cz/volny-cas/kultura/kulturni-akce/filmovy-kviz-sportovni-hala-9606_4002cs.html",
+   "srcName": "mesto-zruc.cz"
+  },
+  {
+   "title": "Vánoční vytrubování se Zručskou desítkou",
+   "place": "zruc_spolkovy",
+   "type": "kultura",
+   "price": null,
+   "priceLabel": null,
+   "tags": [
+    "rodina"
+   ],
+   "desc": "Předvánoční koncert dechové hudby.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-17T18:00",
+     "2026-12-17T19:30"
+    ]
+   ],
+   "src": "https://www.mesto-zruc.cz/volny-cas/kultura/kulturni-akce/vanocni-vytrubovani-se-zrucskou-desitkou-9631_4025cs.html",
+   "srcName": "mesto-zruc.cz"
+  },
+  {
+   "title": "Vánoční jízda Posázavím (zvláštní vlak)",
+   "place": "stern_vlak",
+   "type": "kultura",
+   "price": 690,
+   "priceLabel": "zpáteční 690 Kč, dítě 490 Kč",
+   "tags": [
+    "rodina"
+   ],
+   "desc": "Výletní vlak Praha – Čerčany – Sázava – Český Šternberk – Ledeč nad Sázavou, zpět přes Světlou nad Sázavou a Kolín do Prahy. Nástup v Sázavě ve 12:52 nebo v Českém Šternberku ve 13:16. Jízdní řád je předběžný, v Ratajích vlak nestaví. Jízdenky jen předem.",
+   "allDay": false,
+   "openEnd": true,
+   "poster": null,
+   "occ": [
+    [
+     "2026-12-27T13:16",
+     "2026-12-27T17:00"
+    ]
+   ],
+   "src": "https://valenta-rail.cz/vyletni-vlaky/vanocni-jizda/",
+   "srcName": "valenta-rail.cz"
+  },
+  {
+   "title": "Dva nahatý chlapi",
+   "place": "s_kd",
+   "type": "kultura",
+   "price": 690,
+   "priceLabel": null,
+   "tags": [],
+   "desc": "Komedie Sébastiena Thiéryho v režii Antonína Procházky. Hrají Martin Zounar, Martina Randová, Martin Kraus a další. Délka 120 minut.",
+   "allDay": false,
+   "openEnd": false,
+   "poster": "https://goout.net/i/086/868733-383.jpg",
+   "occ": [
+    [
+     "2027-01-15T19:00",
+     "2027-01-15T21:00"
+    ]
+   ],
+   "src": "https://goout.net/cs/dva-nahaty-chlapi/szxkhiy/",
+   "srcName": "GoOut"
   }
  ]
 }
